@@ -4,18 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Software | Lindsey Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html">Lindsey <span>Lab</span></a>
+    <a class="brand" href="index.html">Lindsey <span>Lab</span><small>University of Michigan &middot; Chemical Engineering</small></a>
     <nav class="site-nav">
       <a href="index.html">Research</a>
       <a href="people.html">People</a>
       <a href="publications.html">Publications</a>
       <a href="software.html" aria-current="page">Software</a>
+      <a href="news.html">News</a>
+      <a href="join.html">Join</a>
     </nav>
   </div>
 </header>
@@ -24,68 +29,101 @@
   <div class="wrap">
 
     <h1 class="page-title">Software</h1>
-    <p class="lead">Open-source tools developed and maintained by the group.</p>
+    <p class="lead">
+      We develop artificial intelligence tools that enable quantum-accurate simulation of complex, inherently
+      multiscale systems on previously inaccessible scales.
+    </p>
 
     <h2>ChIMES</h2>
     <p>
-      The Chebyshev Interaction Model for Efficient Simulation (ChIMES) is a machine-learned
-      many-body interatomic model built from linear combinations of Chebyshev polynomials,
-      designed for reactive chemistry in condensed phases and under extreme conditions.
+      We are the lead developers of the <strong>Chebyshev Interaction Model for Efficient Simulation (ChIMES)</strong>,
+      a physics-informed machine-learned interatomic potential (ML-IAP) and development framework. ChIMES models
+      approach quantum accuracy through a systematically improvable, explicitly many-bodied basis of linear
+      combinations of Chebyshev polynomials. ChIMES was the first ML-IAP specifically designed to describe
+      condensed-phase chemistry under extreme conditions, and has since proven extensible to
+      <a href="publications.html">a wide range of problems</a>, from structure in ambient water to the phase
+      behavior of carbon at thousands of kelvin and tens of GPa.
     </p>
+    <p>
+      Beyond generating models, we develop supporting tools that tackle grand challenges in ML-IAP development,
+      including automation, reproducibility, uncertainty quantification, and training-set selection.
+    </p>
+
+    <h2>The ChIMES suite</h2>
     <div class="grid">
-      <div class="card">
-        <h3>chimes_calculator</h3>
-        <p>Tools to interface ChIMES with various external simulation codes.</p>
-        <p class="links">
-          <a href="https://github.com/rk-lindsey/chimes_calculator">GitHub</a> &middot;
-          <a href="https://chimes-calculator.readthedocs.io/en/latest/">Docs</a>
-        </p>
+      <div class="card tool">
+        <img src="img/software/chimes-lsq.webp" alt="ChIMES Least Squares (LSQ) logo" loading="lazy">
+        <div>
+          <h3>ChIMES Least Squares (LSQ)</h3>
+          <p>A basic tool for generating a ChIMES ML-IAP from a fixed training set.</p>
+          <p class="links"><a href="https://github.com/rk-lindsey/chimes_lsq">GitHub</a> &middot; <a href="https://chimes-lsq.readthedocs.io/en/latest/">Docs</a></p>
+        </div>
       </div>
-      <div class="card">
-        <h3>chimes_lsq</h3>
-        <p>Tools to generate ChIMES parameter sets from reference data.</p>
-        <p class="links">
-          <a href="https://github.com/rk-lindsey/chimes_lsq">GitHub</a> &middot;
-          <a href="https://chimes-lsq.readthedocs.io/en/latest/">Docs</a>
-        </p>
+      <div class="card tool">
+        <img src="img/software/chimes-calculator.webp" alt="ChIMES Calculator logo" loading="lazy">
+        <div>
+          <h3>ChIMES Calculator</h3>
+          <p>A multi-language API for evaluating ChIMES interactions.</p>
+          <p class="links"><a href="https://github.com/rk-lindsey/chimes_calculator">GitHub</a> &middot; <a href="https://chimes-calculator.readthedocs.io/en/latest/">Docs</a></p>
+        </div>
       </div>
-      <div class="card">
-        <h3>al_driver</h3>
-        <p>An AI-driven active-learning framework for automated ChIMES model development.</p>
-        <p class="links">
-          <a href="https://github.com/rk-lindsey/al_driver">GitHub</a> &middot;
-          <a href="https://al-driver.readthedocs.io/en/latest/">Docs</a>
-        </p>
+      <div class="card tool">
+        <img src="img/software/chimes-ald.webp" alt="Active Learning Driver (ALD) logo" loading="lazy">
+        <div>
+          <h3>Active Learning Driver (ALD)</h3>
+          <p>An AI-driven workflow tool for autonomous ChIMES model development.</p>
+          <p class="links"><a href="https://github.com/rk-lindsey/al_driver">GitHub</a> &middot; <a href="https://al-driver.readthedocs.io/en/latest/">Docs</a></p>
+        </div>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:16px">
+      ChIMES models can be generated with ChIMES LSQ, though the ALD is recommended for all but the most basic
+      problems. The ChIMES Calculator supports C, C++, Fortran77, Fortran08, and Python3, includes an interface
+      for <a href="https://www.lammps.org/">LAMMPS</a>, and the <a href="https://dftbplus.org/">DFTB+</a> code ships
+      with native ChIMES support. Models developed by our group are available in the ChIMES Calculator repository.
+    </p>
+
+    <h2>Selected capabilities</h2>
+    <div class="grid">
+      <div class="card feature">
+        <img src="img/software/active-learning.webp" alt="" loading="lazy">
+        <h3>ChIMES Cluster-Based Active Learning for Reacting Systems</h3>
+        <p>A new strategy built upon information entropy and statistical mechanics.</p>
+        <p class="links"><a href="https://doi.org/10.1063/5.0021965">Paper</a></p>
+      </div>
+      <div class="card feature">
+        <img src="img/software/cluster-graph.webp" alt="" loading="lazy">
+        <h3>ChIMES Cluster-Graph Fingerprinting</h3>
+        <p>A framework for application-agnostic, quantitative analysis of MLIP training and simulation data.</p>
+        <p class="links"><a href="https://doi.org/10.1021/acs.jcim.5c02179">Paper</a></p>
+      </div>
+      <div class="card feature">
+        <img src="img/software/million-atom.webp" alt="" loading="lazy">
+        <h3>&gt;Million-Atom Simulations Enabled by ChIMES</h3>
+        <p>Predicting shock-driven nanocarbon synthesis with atomic resolution, on scales overlapping with experiment.</p>
+        <p class="links"><a href="https://doi.org/10.1038/s41467-022-29024-x">Paper</a></p>
       </div>
     </div>
 
-    <h2>Analysis tools</h2>
+    <h2>Group repositories</h2>
     <div class="grid">
       <div class="card">
         <h3>chimes_CGD</h3>
-        <p>
-          Computes the Cluster-Graph Dissimilarity metric from ChIMES descriptors, used to
-          quantify coverage of MLIP training and simulation data.
-        </p>
-        <p class="links">
-          <a href="https://github.com/LindseyLab-umich/chimes_CGD">GitHub</a> &middot;
-          <a href="https://doi.org/10.1021/acs.jcim.5c02179">Paper</a>
-        </p>
+        <p>Computes the Cluster-Graph Dissimilarity metric from ChIMES descriptors.</p>
+        <p class="links"><a href="https://github.com/LindseyLab-umich/chimes_CGD">GitHub</a></p>
       </div>
-    </div>
-
-    <h2>Data and workflows</h2>
-    <div class="grid">
       <div class="card">
         <h3>Insights from ML-accelerated DFT</h3>
-        <p>
-          Example workflows and ChIMES training and hyperparameter files for high-pressure
-          phase diagram prediction.
-        </p>
+        <p>Example workflows and ChIMES training/hyperparameter files for high-pressure phase diagram prediction.</p>
         <p class="links">
           <a href="https://github.com/LindseyLab-umich/Insights_from_ML_Accel_DFT-Workflows">Workflows</a> &middot;
           <a href="https://github.com/LindseyLab-umich/Insights_from_ML_Accel_DFT-ChIMES_Training_Files">Training files</a>
         </p>
+      </div>
+      <div class="card">
+        <h3>All repositories</h3>
+        <p>Forks and research code maintained by the group.</p>
+        <p class="links"><a href="https://github.com/LindseyLab-umich">github.com/LindseyLab-umich</a></p>
       </div>
     </div>
 
@@ -95,7 +133,11 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>Lindsey Lab &middot; Department of Chemical Engineering &middot; University of Michigan, Ann Arbor</span>
-    <a href="https://github.com/LindseyLab-umich">GitHub</a>
+    <span>
+      <a href="https://github.com/LindseyLab-umich">GitHub</a> &middot;
+      <a href="https://x.com/The_Lindsey_Lab">@The_Lindsey_Lab</a> &middot;
+      <a href="https://scholar.google.com/citations?user=S1kLwmQAAAAJ">Google Scholar</a>
+    </span>
   </div>
 </footer>
 

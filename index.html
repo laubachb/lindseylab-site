@@ -4,97 +4,129 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lindsey Lab | University of Michigan</title>
-  <meta name="description" content="The Lindsey Lab at the University of Michigan studies chemistry in multiscale systems and materials under extreme conditions using simulation and machine learning.">
+  <meta name="description" content="The Lindsey Lab at the University of Michigan develops AI-driven simulation tools for chemistry and materials under extreme conditions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html">Lindsey <span>Lab</span></a>
+    <a class="brand" href="index.html">Lindsey <span>Lab</span><small>University of Michigan &middot; Chemical Engineering</small></a>
     <nav class="site-nav">
       <a href="index.html" aria-current="page">Research</a>
       <a href="people.html">People</a>
       <a href="publications.html">Publications</a>
       <a href="software.html">Software</a>
+      <a href="news.html">News</a>
+      <a href="join.html">Join</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <h1>Chemistry and materials under extreme conditions</h1>
-    <p>
-      The Lindsey Lab in the Department of Chemical Engineering at the University of Michigan
-      studies chemistry in inherently multiscale systems and material evolution under extreme and
-      dynamically changing conditions, using advanced simulation and machine learning.
-    </p>
+    <div>
+      <h1>Machine Learning &amp; Simulation for Accelerated Materials Design &amp; Discovery</h1>
+      <p class="tagline">Forging a path from Edisonian to intelligent materials design</p>
+      <p>
+        Intelligent materials design and discovery requires a detailed, atomistically resolved
+        understanding of complex, often reaction-driven phenomena occurring over spatiotemporal scales
+        spanning four orders of magnitude &mdash; information inaccessible through standard research
+        approaches. Experimentally, short-timescale kinetic information is generally inaccessible; computationally,
+        models accurate enough to describe complex chemistry generally cannot reach the relevant scales.
+      </p>
+      <p>
+        In the Lindsey Lab, we <a href="software.html">develop and apply AI-driven simulation and inference tools</a>
+        to bridge this gap and enable large-scale, &ldquo;quantum&rdquo;-accurate simulations.
+      </p>
+    </div>
+    <figure><img src="img/group/mtsm2024.webp" alt="Lindsey Lab group photo"><figcaption>The Lindsey Lab hosts the 2024 Midwest Thermodynamics and Statistical Mechanics Conference.</figcaption></figure>
   </div>
 </section>
 
 <main>
   <div class="wrap">
 
-    <h2>Research areas</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Chemistry at extreme conditions</h3>
-        <p>
-          Multiscale simulations of shock- and pressure-driven chemistry: detonation, carbon
-          condensation and nanoparticle growth, phase transformations, equations of state, and
-          thermochemistry far from ambient conditions.
-        </p>
+    <h2>What we study</h2>
+
+    <div class="thrust">
+      <div class="thrust-img">
+        <img src="img/research/extreme-conditions.webp" alt="Explosive detonation test" loading="lazy">
       </div>
-      <div class="card">
-        <h3>Machine-learned interatomic models</h3>
+      <div>
+        <h3><span class="num">1</span>How does chemistry govern material evolution under extreme conditions?</h3>
         <p>
-          Development of the ChIMES many-body interaction models and the active-learning
-          workflows that train them, giving near-quantum accuracy at the time and length
-          scales of reactive molecular dynamics.
+          Extreme-condition events, in which material is subjected to thousands of kelvin and up to hundreds of
+          GPa, occur naturally in planetary interiors, lightning strikes, cometary impacts, and explosions. Yet we
+          have limited understanding of what happens at the level of individual atoms, because such conditions are
+          hard to create and probe in the laboratory. These missing insights matter for additive manufacturing,
+          shockwave materials synthesis, and explosives design.
         </p>
-      </div>
-      <div class="card">
-        <h3>Data science for materials</h3>
         <p>
-          Machine-learning tools to interpret large experimental and simulation datasets,
-          quantify training-set coverage, and build material diagnostic and performance models.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Soft and nanostructured materials</h3>
-        <p>
-          Transferable many-body models for complex soft matter, including polymer-grafted
-          nanoparticles, and machine-learning tools for nanomaterial design and discovery.
+          We deploy our AI-driven simulation capability in systematic studies, building from single- to
+          many-atom-type systems, to ask how chemical composition governs the condensed-phase thermochemistry
+          that ensues in these events.
+          [<a href="https://doi.org/10.1063/5.0157238">1</a>,
+          <a href="https://doi.org/10.1039/C9SC00155G">2</a>,
+          <a href="https://doi.org/10.1021/acs.jctc.7b00867">3</a>]
         </p>
       </div>
     </div>
 
-    <h2>Recent work</h2>
+    <div class="thrust">
+      <div class="thrust-img">
+        <img src="img/research/nanocarbon-clusters.webp" alt="Simulated carbon nanoparticle clusters and microstructure analysis" loading="lazy">
+        <img src="img/research/microstructure.webp" alt="Simulated carbon nanoparticle clusters and microstructure analysis" loading="lazy">
+      </div>
+      <div>
+        <h3><span class="num">2</span>Exploiting those insights for in silico design of next-generation materials</h3>
+        <p>
+          Chemistry under extreme temperature, pressure, and strain rate has implications for advanced materials
+          processing (laser ablation, sonication, electron-beam modification), detonation science, sustainable
+          energy, and beyond &mdash; geology, astrophysics, and astrobiology. Simulations reveal the interplay
+          between external stimuli and precursor that governs the resulting material, knowledge that can improve
+          the efficiency and precision of these techniques. We combine AI-driven multiscale simulation and data
+          science to advance these areas.
+          [<a href="https://doi.org/10.1038/s41467-019-14034-z">1</a>,
+          <a href="https://doi.org/10.1038/s41467-022-29024-x">2</a>]
+        </p>
+      </div>
+    </div>
+
+    <div class="thrust">
+      <div class="thrust-img">
+        <img src="img/research/carbon-oxygen.webp" alt="Carbon condensation in a shocked carbon/oxygen system" loading="lazy">
+      </div>
+      <div>
+        <h3><span class="num">3</span>An atomistically resolved view of multiscale reacting systems</h3>
+        <p>
+          Material and process optimization &mdash; for hydrogen storage, carbon sequestration, and catalysis
+          &mdash; is often complicated by complex governing phenomena and massive design spaces. We accelerate these
+          efforts with simulation-informed machine learning: simulations elucidate governing phenomena and identify
+          regions of interest, and machine learning finds optimal solutions within the resulting design spaces.
+          [<a href="https://www.osti.gov/biblio/1662036">1</a>,
+          <a href="https://doi.org/10.1038/s41467-022-29024-x">2</a>]
+        </p>
+        <p>
+          Questions we&rsquo;re asking include: What nucleation mechanism drives solution-phase perovskite synthesis?
+          How are halogens distributed in mixed-halide perovskites, and how does that affect performance? In zeolite
+          membranes, why do nanosheet galleries provide such good selectivity for ammonia synthesis, and can we
+          enhance performance by fine-tuning nanosheet complexing?
+        </p>
+      </div>
+    </div>
+
+    <h2>Recent publications</h2>
     <ul class="pubs">
-      <li>
-        <div class="title">Equilibrium and non-equilibrium effects in high pressure phase transformations of carbon</div>
-        <div class="venue"><em>Communications Materials</em> (2026) &middot; <a href="https://doi.org/10.1038/s43246-026-01179-w">doi</a></div>
-      </li>
-      <li>
-        <div class="title">Cluster-Graph Fingerprinting: A Framework for Quantitative Analysis of Machine-Learned Interatomic Model Training and Simulation Data</div>
-        <div class="venue"><em>J. Chem. Inf. Model.</em> (2025) &middot; <a href="https://doi.org/10.1021/acs.jcim.5c02179">doi</a></div>
-      </li>
-      <li>
-        <div class="title">ChIMES Carbon 2.0: A transferable machine-learned interatomic model harnessing multifidelity training data</div>
-        <div class="venue"><em>npj Comput. Mater.</em> (2025) &middot; <a href="https://doi.org/10.1038/s41524-024-01497-y">doi</a></div>
-      </li>
+      <li class="noimg"><div><div class="title">Equilibrium and Non-Equilibrium Effects in High Pressure Phase Transformations of Carbon</div><div class="venue"><em>Commun. Mater.</em> <b>7</b>, 206 (2026) &middot; <a href="https://doi.org/10.1038/s43246-026-01179-w">link</a></div></div></li>
+      <li class="noimg"><div><div class="title">Hierarchical Transfer Learning: An Agile and Equitable Strategy for Machine-Learning Interatomic Models</div><div class="venue"><em>npj Comput. Mater.</em> <b>12</b>, 18 (2026) &middot; <a href="https://doi.org/10.1038/s41524-025-01863-4">link</a></div></div></li>
+      <li class="noimg"><div><div class="title">Cluster-Graph Fingerprinting: A Framework for Quantitative Analysis of Machine-Learned Interatomic Model Training and Simulation Data</div><div class="venue"><em>J. Chem. Inf. Model.</em> <b>66</b>, 182&ndash;193 (2026) &middot; <a href="https://doi.org/10.1021/acs.jcim.5c02179">link</a></div></div></li>
+      <li class="noimg"><div><div class="title">A Generalized Machine-Learning Framework for Developing Alchemical Many-Body Interaction Models for Polymer-Grafted Nanoparticles</div><div class="venue"><em>J. Chem. Theory Comput.</em> <b>21</b>, 9853&ndash;9867 (2025) &middot; <a href="https://doi.org/10.1021/acs.jctc.5c00901">link</a></div></div></li>
     </ul>
     <p><a href="publications.html">All publications &rarr;</a></p>
-
-    <h2>Join us</h2>
-    <p>
-      We are interested in students and postdocs with backgrounds in chemical engineering,
-      chemistry, physics, materials science, or computer science who want to work at the
-      intersection of molecular simulation and machine learning. Prospective students should
-      apply through the
-      <a href="https://che.engin.umich.edu/">University of Michigan Chemical Engineering</a>
-      graduate program.
-    </p>
 
   </div>
 </main>
@@ -102,7 +134,11 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>Lindsey Lab &middot; Department of Chemical Engineering &middot; University of Michigan, Ann Arbor</span>
-    <a href="https://github.com/LindseyLab-umich">GitHub</a>
+    <span>
+      <a href="https://github.com/LindseyLab-umich">GitHub</a> &middot;
+      <a href="https://x.com/The_Lindsey_Lab">@The_Lindsey_Lab</a> &middot;
+      <a href="https://scholar.google.com/citations?user=S1kLwmQAAAAJ">Google Scholar</a>
+    </span>
   </div>
 </footer>
 
